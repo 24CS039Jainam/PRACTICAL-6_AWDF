@@ -1,0 +1,270 @@
+#root {
+  min-height: 100vh;
+}
+
+.page {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 42px 0;
+}
+
+.hero {
+  background: #182230;
+  color: white;
+  border-radius: 22px;
+  padding: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  opacity: .65;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 52px);
+}
+
+.student {
+  margin: 10px 0 0;
+  opacity: .75;
+}
+
+.connection {
+  padding: 11px 15px;
+  background: rgba(255,255,255,.09);
+  border-radius: 999px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #58d68d;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 22px;
+}
+
+.panel {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 28px rgba(15,23,42,.06);
+}
+
+.panel h2 {
+  margin: 0;
+}
+
+.hint {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.task-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select,
+.edit-input {
+  width: 100%;
+  border: 1px solid #d8dee8;
+  border-radius: 10px;
+  padding: 11px 12px;
+  outline: none;
+  background: white;
+}
+
+.task-form textarea {
+  resize: vertical;
+}
+
+.task-form input:focus,
+.task-form textarea:focus,
+.task-form select:focus,
+.edit-input:focus {
+  border-color: #536dfe;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  background: #4055d6;
+  color: white;
+  font-weight: 700;
+}
+
+button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.secondary,
+.refresh {
+  background: #e9edf5;
+  color: #273244;
+}
+
+.danger {
+  background: #dc4c64;
+}
+
+.list-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.task-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.task-card {
+  border: 1px solid #e1e6ee;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.task-card.done {
+  background: #f2fbf6;
+}
+
+.task-card h3 {
+  margin: 0;
+}
+
+.task-card p {
+  color: #667085;
+  line-height: 1.5;
+}
+
+.task-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+  color: #667085;
+}
+
+.priority {
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #eef1f6;
+  text-transform: capitalize;
+}
+
+.priority.high {
+  background: #ffe5e9;
+  color: #a62238;
+}
+
+.priority.medium {
+  background: #fff1cf;
+  color: #805c00;
+}
+
+.priority.low {
+  background: #e5f6ec;
+  color: #21683d;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.check-line {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.empty {
+  padding: 42px 10px;
+  text-align: center;
+  color: #7a8494;
+}
+
+.error-box {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #fff0f1;
+  color: #a51f35;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.error-box button {
+  background: #a51f35;
+}
+
+footer {
+  text-align: center;
+  color: #7a8494;
+  padding: 24px;
+  font-size: 13px;
+}
+
+.toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  padding: 13px 18px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 12px 35px rgba(0,0,0,.18);
+  font-weight: 700;
+}
+
+.toast.success {
+  background: #23804b;
+}
+
+.toast.error {
+  background: #b82e46;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .connection {
+    white-space: normal;
+  }
+}
